@@ -1,0 +1,32 @@
+SMART FIRE STATION - Module Personnel (version 3 : 1 .h + 1 .cpp + main.cpp, interface d'origine)
+
+CONTENU
+  Personnel/                         projet Qt
+      personnel.h                    UN SEUL fichier d'en-tete (Connection, Personnel, modele du tableau, diagramme, fenetre)
+      personnel.cpp                  UN SEUL fichier d'implementation
+      main.cpp                       point d'entree
+      style/style.qss, images/       charte graphique (interface d'origine : statistiques, formulaire Ajouter/Modifier...)
+  database.sql                       base de donnees complete
+  mise_a_jour_personnel.sql          pour mettre a jour une table PERSONNEL deja creee
+  1_Modele_Entite_Association_v2.docx
+  2_Modele_Relationnel_v2.docx
+
+ETAPE 1 - BASE DE DONNEES (SQL Developer, connexion fares_conn)
+  Cas A : vous avez deja les 5 tables  ->  ouvrir mise_a_jour_personnel.sql, F5 (une seule fois).
+  Cas B : vous repartez de zero        ->  executer les lignes DROP de database.sql, puis tout le fichier (F5).
+  Verification : SELECT column_name FROM user_tab_columns WHERE table_name='PERSONNEL';  -> 11 colonnes.
+
+ETAPE 2 - QT
+  Ouvrir Personnel/Personnel.pro, puis personnel.cpp (classe Connection, en haut du fichier) :
+  remplir VOTRE_UTILISATEUR et VOTRE_MOT_DE_PASSE.   Run (Ctrl+R).
+
+ETAPE 3 - CONNEXION
+  Comptes de test : ahmed@station.tn  ou  sami@station.tn
+  Mot de passe : Admin123        Reponse secrete : tunis
+
+ETAPE 4 - TESTS
+  Metiers avances : Authentification, Mot de passe oublie.
+  CRUD : Ajouter (puis Enregistrer), Modifier (bouton ou double-clic), Supprimer, Rechercher, Trier, Exporter PDF.
+  Statistiques : diagramme circulaire par grade, a droite.
+
+GITHUB : jamais "upload". Ajouter dans un NOUVEAU dossier, puis git add . / git commit / git push.
